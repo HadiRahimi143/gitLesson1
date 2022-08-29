@@ -4,11 +4,14 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var expressLayout = require('express-ejs-layouts')
+var expressLayout = require('express-ejs-layouts');
+
+require('dotenv').config();
 
 // router requires
 var indexRouter = require('./routes/index');
 var registerRouter = require('./routes/register');
+
 
 
 //mongoDB connection
