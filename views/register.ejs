@@ -1,0 +1,46 @@
+
+
+
+<h2 style="text-align:center;font-size:35px;font-family:Arial, Helvetica, sans-serif">Please Regiser!</h2>
+
+<form action="/register/newRegister" method="post" style="text-align:center">
+
+    <input type="number" name="ID" id="id" placeholder="ID" style="border:2px solid #222222;font-size:20px;background:#222222;color:#fff;border-radius: 5px;text-align: center;"> <br><br>
+    <input type="text" name="Name" id="name" placeholder="Name" style="border:2px solid #222222;font-size:20px;background:#222222;color:#fff;border-radius: 5px;text-align: center;"> <br><br>
+    <input type="text" name="Surname" id="surname" placeholder="Surname" style="border:2px solid #222222;font-size:20px;background:#222222;color:#fff;border-radius: 5px;text-align: center;"><br><br>
+    <input type="submit" name="submit" id="submit" style="background: #222222;color:#fff;font-size: 20px;border-radius: 5px;">
+</form>
+
+<hr>
+<hr>
+<hr>
+
+<h1 style="text-align:center;font-size:35px;font-family:Arial, Helvetica, sans-serif">Teacher who are already registerd!</h1>
+
+<table  id="table-db" style="width: 100%;">
+
+    <tr>
+        <th style="border:2px solid; border-radius:50px ;text-align: center;color: #222222;font-size: 20px;font-family: Arial, Helvetica, sans-serif;">ID</th>
+        <th style="border:2px solid; border-radius:50px ;text-align: center;color: #222222;font-size: 20px;font-family: Arial, Helvetica, sans-serif;">Name</th>
+        <th style="border:2px solid; border-radius:50px;text-align: center;color: #222222;font-size: 20px;font-family: Arial, Helvetica, sans-serif;">Surname</th>
+        <th style="border:2px solid; border-radius:50px;text-align: center;color: #222222;font-size: 20px;font-family: Arial, Helvetica, sans-serif;">Action</th>
+    </tr>
+    
+    <% teachers.forEach(function(teacher){ %>
+
+         <tr>
+            <td style="border:1px solid;text-align: center; color: #222222;font-size: 20px;  font-family: Arial, Helvetica, sans-serif;border-radius: 30px;"> <%- teacher.ID %> </td>
+            <td style="border:1px solid;text-align: center; color: #222222;font-size: 20px;  font-family: Arial, Helvetica, sans-serif;border-radius: 30px;"> <%- teacher.Name %></td>
+            <td style="border:1px solid;text-align: center; color: #222222;font-size: 20px;  font-family: Arial, Helvetica, sans-serif;border-radius: 30px;"> <%- teacher.Surname %></td>
+            <td style="border:1px solid;; color: #222222;font-size: 20px;  font-family: Arial, Helvetica, sans-serif;border-radius: 30px;"><a href="#"><button style="margin-left:20px;border-radius:10px">Remove</button></a></td>
+        </tr>
+    <% }) %>
+
+    
+ 
+  
+
+
+
+</table>
+<br><br><br>
