@@ -15,11 +15,11 @@ var registerRouter = require('./routes/register');
 
 
 //mongoDB connection
-//var mongoose = require ('mongoose');
-//mongoose.connect ('mongodb://localhost/School-DB');
+var mongoose = require ('mongoose');
+mongoose.connect ('mongodb://localhost/School-DB');
 
 // model requires
-//var registerModel = require('./model/register');
+var registerModel = require('./model/register');
 
 
 var app = express();
