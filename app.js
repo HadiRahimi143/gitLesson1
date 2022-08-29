@@ -16,7 +16,7 @@ var mongoose = require ('mongoose');
 mongoose.connect ('mongodb://localhost/School-DB');
 
 // model requires
-var registerModel = ('./model/register');
+var registerModel = require('./model/register');
 
 
 var app = express();

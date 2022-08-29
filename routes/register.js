@@ -34,7 +34,14 @@ router.post('/newRegister', function(req,res,next){
 });
 
 
-// delete database documents
+// delete button router
+router.get('/delete/:id', function(req,res,next){
+
+    registerModel.findOneAndDelete({_id: req.params.id},()=>{
+        res.redirect('/register')
+    });
+
+})
 
 
 module.exports = router;
