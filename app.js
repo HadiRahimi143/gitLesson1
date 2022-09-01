@@ -6,7 +6,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var expressLayout = require('express-ejs-layouts');
 
-//require('dotenv').config();
+require('dotenv').config();
 
 // router requires
 var indexRouter = require('./routes/index');
@@ -15,11 +15,11 @@ var registerRouter = require('./routes/register');
 
 
 //mongoDB connection
-//var mongoose = require ('mongoose');
-//mongoose.connect ('mongodb://localhost/School-DB');
+var mongoose = require ('mongoose');
+mongoose.connect (process.env.DATABASE_URL);
 
 // model requires
-//var registerModel = require('./model/register');
+var registerModel = require('./model/register');
 
 
 var app = express();
