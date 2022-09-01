@@ -6,7 +6,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var expressLayout = require('express-ejs-layouts');
 
-require('dotenv').config();
+//require('dotenv').config();
 
 // router requires
 var indexRouter = require('./routes/index');
